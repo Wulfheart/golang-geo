@@ -193,7 +193,7 @@ func TestPolygonSimple(t *testing.T) {
 	}
 
 	testers := []testPoint{
-		ntp(0, 0, true), ntp(0.5, 0.5, true), ntp(9, 9, false), ntp(0.5, 0, true), ntp(0.2, 0.4, true), ntp(1, 0.9, true), ntp(1, 1, true),
+		ntp(0, 0, true), ntp(0.5, 0.5, true), ntp(9, 9, false), ntp(0.5, 0, true), ntp(0.2, 0.4, true), ntp(1, 0.9, true), ntp(1, 1, true), ntp(0.00000000000000000000009, 0.00000000000000000000000000000001, true),
 	}
 
 	polygon := NewPolygon(polygonPoints)
