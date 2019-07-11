@@ -157,7 +157,7 @@ func polygonFromFile(filename string) (*Polygon, error) {
 
 func TestPolygonNotClosed(t *testing.T) {
 	points := []*Point{
-		NewPoint(0, 0), NewPoint(0, 1), NewPoint(1, 1), NewPoint(1, 0),
+		NewPoint(0, 0), NewPoint(0, 1), //! NewPoint(1, 1), NewPoint(1, 0), if stricter rules for a closed polygon apply
 	}
 	poly := NewPolygon(points)
 	if poly.IsClosed() {

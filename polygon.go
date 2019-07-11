@@ -38,9 +38,11 @@ func (p *Polygon) IsClosed() bool {
 	if len(p.points) < 3 {
 		return false
 	}
-	if *p.points[0] != *p.points[len(p.points)-1] {
-		return false
-	}
+
+	// !Currently the following section would break to much older code as it is more strict on the definition of a closed polygon.
+	// if *p.points[0] != *p.points[len(p.points)-1] {
+	// 	return false
+	// }
 
 	return true
 }
