@@ -51,6 +51,13 @@ func (p *Polygon) Contains(point *Point) bool {
 		return false
 	}
 
+	// For now it recognizes a point only if it is in the polygon or on an edge. If the point is on one of the corners it returns false, so a quick and dirty array comparison.
+	for _, p := range p.points {
+		if p.lat == point.lat && p.lng == point.lng {
+			return true
+		}
+	}
+
 	start := len(p.points) - 1
 	end := 0
 
