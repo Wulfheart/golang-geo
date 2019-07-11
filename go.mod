@@ -1,4 +1,4 @@
-module github.com/Wulfheart/golang-geo
+module github.com/kellydunn/golang-geo
 
 go 1.12
 
