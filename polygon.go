@@ -49,6 +49,7 @@ func (p *Polygon) Contains(point *Point) bool {
 	}
 
 	// For now it recognizes a point only if it is in the polygon or on an edge. If the point is on one of the corners it returns false, so a quick and dirty array comparison.
+	// Look here for further options: https://github.com/kellydunn/golang-geo/pull/71#discussion_r303040014
 	for _, p := range p.points {
 		if p.lat == point.lat && p.lng == point.lng {
 			return true
